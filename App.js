@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { HelloWorld } from './components/HelloWorld';
+import Main from './components/Main';
 
+
+console.log('patata')
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hola Foca!</Text>
+      <Main />
       <StatusBar style="auto" />
     </View>
   );
