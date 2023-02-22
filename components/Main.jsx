@@ -1,11 +1,15 @@
 import Constants from 'expo-constants'
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import RepositoryList from './RepositoryList'
+import AppBar from './AppBar'
 
 const Main = () => {
   return (
     <View style={styles.container}>
+      <AppBar />
       <Text>Rate Repository Application</Text>
+      <RepositoryList />
     </View>
   )
 }

@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { HelloWorld } from './components/HelloWorld';
 import Main from './components/Main';
 
 

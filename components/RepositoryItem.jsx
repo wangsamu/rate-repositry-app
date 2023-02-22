@@ -1,16 +1,16 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const RepositoryItem = (props) => {
-    const [
-        fullName,
+const RepositoryItem = ({item}) => {
+    const {fullName,
         description,
         language,
         forksCount,
         stargazersCount,
         ratingAverage,
-        reviewCount,
-        ownerAvatarUrl] = props
+        reviewCount} = item
+
+        console.log(item)
   return (
       <View>
         <Text>Full name: {fullName}</Text>
