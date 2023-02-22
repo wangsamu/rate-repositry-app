@@ -62,23 +62,9 @@ const RepositoryList = () => {
     <FlatList
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
-      renderItem={(item) => (
-        <RepositoryItem
-          key={item.id}
-          item={item.item}
-        />
-      )}
+      renderItem={(item) => <RepositoryItem key={item.id} item={item.item} />}
     />
   );
 };
 
 export default RepositoryList;
-
-// item.fullName,
-// item.description,
-// item.language,
-// item.forksCount,
-// item.stargazersCount,
-// item.ratingAverage,
-// item.reviewCount,
-// item.ownerAvatarUrl
