@@ -14,7 +14,6 @@ const RepositoryItem = ({ item }) => {
     reviewCount,
   } = item;
 
-  console.log(ownerAvatarUrl);
   return (
     <View style={styles.container}>
       <View style={styles.userContainer}>
