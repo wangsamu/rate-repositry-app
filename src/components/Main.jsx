@@ -3,7 +3,7 @@ import React from "react";
 import RepositoryList from "./RepositoryList";
 import AppBar from "./AppBar";
 
-console.log("patata");
+console.log("patata2");
 const Main = () => {
   return (
     <View style={styles.container}>
