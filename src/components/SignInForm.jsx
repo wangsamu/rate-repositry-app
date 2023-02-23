@@ -19,7 +19,7 @@ const SignInForm = ({ onSubmit }) => {
         style={styles.inputField}
       />
       <Pressable onPress={onSubmit} style={styles.submitButton}>
-        <Text>Sign In</Text>
+        <Text style={styles.submitButtonText}>Sign In</Text>
       </Pressable>
     </View>
   );
@@ -29,17 +29,27 @@ const styles = StyleSheet.create({
   formContainer: {
     width: Dimensions.get("screen").width,
     height: Dimensions.get("screen").height,
-    justifyContent: "center",
     alignItems: "center",
+    paddingTop: 200,
   },
   inputField: {
+    padding: 15,
     width: 300,
     height: 60,
     marginBottom: 20,
-    backgroundColor: "yellow",
+    borderColor: "grey",
+    borderWidth: 2,
+    borderRadius: 5,
   },
   submitButton: {
-    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 200,
+    height: 50,
+    backgroundColor: "#0366d6",
+  },
+  submitButtonText: {
+    color: "white",
   },
 });
 export default SignInForm;
