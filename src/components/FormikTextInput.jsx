@@ -1,14 +1,22 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
+import TextInput from "./TextInput";
 
 const FormikTextInput = ({ name, ...props }) => {
   const [field, meta, helpers] = useField(name);
   const showError = meta.touched && meta.error;
 
   return (
-    <View>
-      <Text>FormikTextInput</Text>
-    </View>
+    <>
+      <TextInput
+        onChangeText={(value) => helpers.setValue(value)}
+        onBlur={() => helpers.setTouched(true)}
+        value={field.value}
+        error={showError}
+        {...props}
+      />
+      {showError && <Text style={styles.errorText}>{meta.errorText}</Text>}
+    </>
   );
 };
 
