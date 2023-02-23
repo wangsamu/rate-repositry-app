@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 
 const SignIn = () => {
@@ -11,6 +11,9 @@ const SignIn = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "white",
     padding: 12.5,
   },

@@ -13,7 +13,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<RepositoryList />} exact />
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="sign-in" element={<SignIn />} exact />
+        <Route path="sign-in" element={<SignIn />} />
       </Routes>
     </View>
   );
