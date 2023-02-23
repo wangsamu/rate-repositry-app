@@ -11,6 +11,7 @@ const SignIn = () => {
 
 const styles = StyleSheet.create({
   container: {
+    width: Dimensions.get("screen").width,
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
