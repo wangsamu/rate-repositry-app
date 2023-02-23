@@ -2,13 +2,17 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import RepositoryList from "./RepositoryList";
 import AppBar from "./AppBar";
+import { Navigate, Route, Routes } from "react-router-native";
 
 console.log("patata2");
 const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <RepositoryList />
+      <Routes>
+        <Route path="/" element={<RepositoryList />} exact />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </View>
   );
 };
