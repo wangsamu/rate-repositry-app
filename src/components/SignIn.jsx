@@ -5,10 +5,13 @@ import SignInForm from "./SignInForm";
 import * as yup from "yup";
 
 const SignIn = () => {
-  const validationSchema = yup.object.shape({});
+  const validationSchema = yup.object().shape({
+    username: yup.string().required("Username is required!"),
+    password: yup.string().required("Password is required!"),
+  });
 
   const initialValues = {
-    userName: "",
+    username: "",
     passWord: "",
   };
 
@@ -18,7 +21,11 @@ const SignIn = () => {
 
   return (
     <View style={styles.container}>
-      <Formik initialValues={initialValues} onSubmit={onSubmit}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        validationSchema={validationSchema}
+      >
         {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
       </Formik>
     </View>

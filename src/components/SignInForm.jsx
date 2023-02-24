@@ -8,16 +8,8 @@ const SignInForm = ({ onSubmit }) => {
 
   return (
     <View style={styles.formContainer}>
-      <FormikTextInput
-        name="username"
-        palceholder="username"
-        style={styles.inputField}
-      />
-      <FormikTextInput
-        name="password"
-        palceholder="password"
-        style={styles.inputField}
-      />
+      <FormikTextInput name="username" placeholder="username" />
+      <FormikTextInput name="password" placeholder="password" />
       <Pressable onPress={onSubmit} style={styles.submitButton}>
         <Text style={styles.submitButtonText}>Sign In</Text>
       </Pressable>
@@ -31,15 +23,6 @@ const styles = StyleSheet.create({
     height: Dimensions.get("screen").height,
     alignItems: "center",
     paddingTop: 200,
-  },
-  inputField: {
-    padding: 15,
-    width: 300,
-    height: 60,
-    marginBottom: 20,
-    borderColor: "grey",
-    borderWidth: 2,
-    borderRadius: 5,
   },
   submitButton: {
     justifyContent: "center",
