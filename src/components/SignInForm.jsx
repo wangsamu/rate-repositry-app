@@ -1,6 +1,7 @@
-import { View, Text, Pressable, StyleSheet, Dimensions } from "react-native";
+import { View, Pressable, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import FormikTextInput from "./FormikTextInput";
+import Text from "./Text";
 
 const SignInForm = ({ onSubmit }) => {
   //   const [usernameField, usernameMeta, usernameHelpers] = useField("username");
