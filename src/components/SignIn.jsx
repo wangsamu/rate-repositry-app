@@ -2,8 +2,11 @@ import { View, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import { Formik } from "formik";
 import SignInForm from "./SignInForm";
+import * as yup from "yup";
 
 const SignIn = () => {
+  const validationSchema = yup.object.shape({});
+
   const initialValues = {
     userName: "",
     passWord: "",
