@@ -58,12 +58,10 @@ const styles = StyleSheet.create({
 const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
-  const [repositories, setRepositories] = useState([]);
+  const [repositories, setRepositories] = useState();
 
   const fetchRepositories = async () => {
-    const response = await fetch(
-      "http://192.168.18.102:19000/api/repositories"
-    );
+    const response = await fetch("http://192.168.18.102:5001/api/repositories");
     const json = await response.json();
 
     console.log(json);
@@ -74,9 +72,13 @@ const RepositoryList = () => {
     fetchRepositories();
   }, []);
 
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
+    : [];
+
   return (
     <FlatList
-      data={repositories}
+      data={repositoryNodes}
       ItemSeparatorComponent={ItemSeparator}
       renderItem={(item) => <RepositoryItem key={item.id} item={item.item} />}
     />
