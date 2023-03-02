@@ -59,10 +59,10 @@ const styles = StyleSheet.create({
 const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
-  const { data } = useRepositories();
+  const { repositories } = useRepositories();
 
-  const repositoryNodes = data
-    ? data.repositories.edges.map((edge) => edge.node)
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
     : [];
 
   return (
